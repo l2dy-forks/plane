@@ -4,7 +4,7 @@ import { Trash2 } from "lucide-react";
 // ui
 import { Tooltip } from "@plane/ui";
 // hooks
-import { useAppRouter } from "@/hooks/store";
+import { useRouterParams } from "@/hooks/store";
 import { BulkDeleteConfirmationModal } from "../bulk-delete-modal";
 
 type Props = {
@@ -17,7 +17,7 @@ export const BulkDeleteIssues: React.FC<Props> = observer((props) => {
   // states
   const [isBulkDeleteModalOpen, setIsBulkDeleteModalOpen] = useState(false);
   // store hooks
-  const { projectId, workspaceSlug } = useAppRouter();
+  const { projectId, workspaceSlug } = useRouterParams();
 
   return (
     <>
