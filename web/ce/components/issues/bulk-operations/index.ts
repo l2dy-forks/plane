@@ -1,2 +1,2 @@
 export * from "./root";
-export * from "./upgrade-banner";
+export * from "./toolbar";

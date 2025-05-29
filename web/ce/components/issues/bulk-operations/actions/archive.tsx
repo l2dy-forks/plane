@@ -4,11 +4,11 @@ import { observer } from "mobx-react";
 import { ArchiveIcon, Tooltip } from "@plane/ui";
 // components
 // constants
-import { ARCHIVABLE_STATE_GROUPS } from "@/constants/state";
+import { ARCHIVABLE_STATE_GROUPS } from "@plane/constants";
 // helpers
 import { cn } from "@/helpers/common.helper";
 // hooks
-import { useAppRouter, useIssueDetail, useProjectState } from "@/hooks/store";
+import { useIssueDetail, useProjectState, useRouterParams } from "@/hooks/store";
 import { BulkArchiveConfirmationModal } from "../bulk-archive-modal";
 
 type Props = {
@@ -21,7 +21,7 @@ export const BulkArchiveIssues: React.FC<Props> = observer((props) => {
   // states
   const [isBulkArchiveModalOpen, setIsBulkArchiveModalOpen] = useState(false);
   // store hooks
-  const { projectId, workspaceSlug } = useAppRouter();
+  const { projectId, workspaceSlug } = useRouterParams();
   const {
     issue: { getIssueById },
   } = useIssueDetail();
