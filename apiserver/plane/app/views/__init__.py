@@ -125,6 +125,8 @@ from .issue.activity import IssueActivityEndpoint
 
 from .issue.archive import IssueArchiveViewSet, BulkArchiveIssuesEndpoint
 
+from .issue.bulk import BulkOperationIssuesEndpoint
+
 from .issue.attachment import (
     IssueAttachmentEndpoint,
     # V2
